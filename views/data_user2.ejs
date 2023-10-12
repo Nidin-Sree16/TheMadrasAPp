@@ -9,12 +9,21 @@
     <link href="../public/style.css" rel="stylesheet">
 </head>
 <header>
-    <!-- As a link -->
+    <script>
+        function redirectToPage() {
+            const destinationUrl = '/';
+            window.location.href = destinationUrl;
+        }
+    </script>
 <nav class="navbar navbar-light" style="background-color: #176B87;">
     <div style="text-align: center;">
         <h1 style=" margin-left: 40px; color: #eee;">The Madras App </h1>
     </div>
+    <p style="text-align: end; color: #eee; margin-top: 10px; margin-bottom: 0px;margin-right: 8px;">Location : Chennai</p>
 </nav>
+<div  class="d-flex justify-content-end" style="margin-right: 5px; margin-top: 5px;">
+    <button type="submit" class="btn btn-primary ml-4 ml-auto" onclick="redirectToPage()">Logout</button>
+</div>
 <body style="background-color: #BFE7F4;">
     <div class="container mt-5">
         <h2 style="text-align: center;">Recommended Offers</h2>
@@ -69,6 +78,7 @@
                         </div>
                     </div>
                 <% }) %>
+                <hr/>
             <% } %>
         </div>
     </div>
